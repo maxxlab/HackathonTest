@@ -39,7 +39,7 @@ function TransactionTile() {
         alignItems: 'center'
       }}
     >
-      <Box sx={{display: 'flex', alignItems: 'center'}}>
+      <Box sx={{display: 'flex'}}>
         <LocalTaxiIcon
           sx={{
             backgroundColor: "#4882F0",

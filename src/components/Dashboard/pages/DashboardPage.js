@@ -7,20 +7,21 @@ import ProfitWidget from "../../widgets/ProfitWidget";
 import Balance from "../../widgets/Balance";
 import SavingsGoals from "../../widgets/SavingsGoals";
 import TransactionHistoryWidget from "../../widgets/TransactionHistoryWidget";
-import Grid from '@mui/material/Grid';
+import Grid from "@mui/material/Grid";
+import Investments from "../../widgets/Investments";
+import Saving from "../../widgets/Saving";
+import Comparison from "../../widgets/Comparison";
 
 export default function DashboardPage() {
   return (
     <Box sx={{ padding: "20px", flexGrow: 1 }}>
-      
       {/* Currency */}
       <Box
         sx={{
           display: "flex",
           flexDirection: "row",
           justifyContent: "space-between",
-          marginTop: "30px",
-          flexWrap: 'wrap'
+          flexWrap: "wrap",
         }}
       >
         <CurrencyWidget />
@@ -41,12 +42,28 @@ export default function DashboardPage() {
         <ProfitWidget />
       </Box>
 
-      <Box sx={{display: 'flex', flexDirection: 'row', justifyContent: 'space-between'}}>
+      <Box
+        sx={{
+          display: "flex",
+          flexDirection: "row",
+          justifyContent: "space-between",
+        }}
+      >
         <Balance />
         <SavingsGoals />
       </Box>
 
-      <TransactionHistoryWidget/>
+      <Box sx={{ display: "flex", justifyContent: "space-between" }}>
+        <TransactionHistoryWidget />
+        <Box>
+          <Box sx={{display: 'flex', marginTop: '-100px', justifyContent: 'justify'}}>
+            <Investments />
+            <Saving />
+          </Box>
+
+          <Comparison />
+        </Box>
+      </Box>
     </Box>
   );
 }
