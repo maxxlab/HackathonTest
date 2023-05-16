@@ -1,48 +1,65 @@
-import * as React from 'react';
-import ListItemButton from '@mui/material/ListItemButton';
-import ListItemIcon from '@mui/material/ListItemIcon';
-import ListItemText from '@mui/material/ListItemText';
-import ListSubheader from '@mui/material/ListSubheader';
-import DashboardIcon from '@mui/icons-material/Dashboard';
-import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
-import PieChartIcon from '@mui/icons-material/PieChart';
-import AccountBalanceIcon from '@mui/icons-material/AccountBalance';
-import AssignmentIcon from '@mui/icons-material/Assignment';
-import SettingsIcon from '@mui/icons-material/Settings';
-import CurrencyBitcoinIcon from '@mui/icons-material/CurrencyBitcoin';
+import * as React from "react";
+import ListItemButton from "@mui/material/ListItemButton";
+import ListItemIcon from "@mui/material/ListItemIcon";
+import ListItemText from "@mui/material/ListItemText";
+import ListSubheader from "@mui/material/ListSubheader";
+import DashboardIcon from "@mui/icons-material/Dashboard";
+import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
+import PieChartIcon from "@mui/icons-material/PieChart";
+import AccountBalanceIcon from "@mui/icons-material/AccountBalance";
+import AssignmentIcon from "@mui/icons-material/Assignment";
+import SettingsIcon from "@mui/icons-material/Settings";
+import CurrencyBitcoinIcon from "@mui/icons-material/CurrencyBitcoin";
+import { Link, Outlet } from "react-router-dom";
 
 export const mainListItems = (
   <React.Fragment>
-    <ListItemButton>
-      <ListItemIcon>
-        <DashboardIcon />
-      </ListItemIcon>
-      <ListItemText primary="Dashboard" />
-    </ListItemButton>
-    <ListItemButton>
-      <ListItemIcon>
-        <PieChartIcon />
-      </ListItemIcon>
-      <ListItemText primary="Expends" />
-    </ListItemButton>
-    <ListItemButton>
-      <ListItemIcon>
-        <AccountBalanceIcon />
-      </ListItemIcon>
-      <ListItemText primary="Credits" />
-    </ListItemButton>
-    <ListItemButton>
-      <ListItemIcon>
-        <CurrencyBitcoinIcon />
-      </ListItemIcon>
-      <ListItemText primary="Investments" />
-    </ListItemButton>
-    <ListItemButton>
-      <ListItemIcon>
-        <SettingsIcon />
-      </ListItemIcon>
-      <ListItemText primary="Settings" />
-    </ListItemButton>
+    <Link to="/dashboard" style={{ textDecoration: "none", color: "#000000" }}>
+      <ListItemButton>
+        <ListItemIcon>
+          <DashboardIcon />
+        </ListItemIcon>
+        <ListItemText primary="Dashboard" />
+      </ListItemButton>
+    </Link>
+
+    <Link to="/expends" style={{ textDecoration: "none", color: "#000000" }}>
+      <ListItemButton>
+        <ListItemIcon>
+          <PieChartIcon />
+        </ListItemIcon>
+        <ListItemText primary="Expends" />
+      </ListItemButton>
+    </Link>
+
+    <Link to="/credits" style={{ textDecoration: "none", color: "#000000" }}>
+      <ListItemButton>
+        <ListItemIcon>
+          <AccountBalanceIcon />
+        </ListItemIcon>
+        <ListItemText primary="Credits" />
+      </ListItemButton>
+    </Link>
+
+    <Link to="/investments" style={{ textDecoration: "none", color: "#000000" }}>
+      <ListItemButton>
+        <ListItemIcon>
+          <CurrencyBitcoinIcon />
+        </ListItemIcon>
+        <ListItemText primary="Investments" />
+      </ListItemButton>
+    </Link>
+
+    <Link to="/settings" style={{ textDecoration: "none", color: "#000000" }}>
+      <ListItemButton>
+        <ListItemIcon>
+          <SettingsIcon />
+        </ListItemIcon>
+        <ListItemText primary="Settings" />
+      </ListItemButton>
+    </Link>
+
+    <Outlet />
   </React.Fragment>
 );
 

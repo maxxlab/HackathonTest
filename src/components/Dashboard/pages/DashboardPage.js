@@ -1,16 +1,16 @@
 import React from "react";
 import Box from "@mui/material/Box";
 import { Typography } from "@mui/material";
-import CurrencyWidget from "../../widgets/CurrencyWidget";
-import MyCards from "../../widgets/MyCards";
-import ProfitWidget from "../../widgets/ProfitWidget";
-import Balance from "../../widgets/Balance";
-import SavingsGoals from "../../widgets/SavingsGoals";
-import TransactionHistoryWidget from "../../widgets/TransactionHistoryWidget";
+import CurrencyWidget from "../../widgets/DashboardWidgets/CurrencyWidget";
+import MyCards from "../../widgets/DashboardWidgets/MyCards";
+import ProfitWidget from "../../widgets/DashboardWidgets/ProfitWidget";
+import Balance from "../../widgets/DashboardWidgets/Balance";
+import SavingsGoals from "../../widgets/DashboardWidgets/SavingsGoals";
+import TransactionHistoryWidget from "../../widgets/DashboardWidgets/TransactionHistoryWidget";
 import Grid from "@mui/material/Grid";
-import Investments from "../../widgets/Investments";
-import Saving from "../../widgets/Saving";
-import Comparison from "../../widgets/Comparison";
+import Investments from "../../widgets/DashboardWidgets/Investments";
+import Saving from "../../widgets/DashboardWidgets/Saving";
+import Comparison from "../../widgets/DashboardWidgets/Comparison";
 
 export default function DashboardPage() {
   return (
@@ -54,14 +54,14 @@ export default function DashboardPage() {
       </Box>
 
       <Box sx={{ display: "flex", justifyContent: "space-between" }}>
-        <TransactionHistoryWidget />
+        <TransactionHistoryWidget width="430px" />
         <Box>
           <Box sx={{display: 'flex', marginTop: '-100px', justifyContent: 'justify'}}>
             <Investments />
             <Saving />
           </Box>
 
-          <Comparison />
+          <Comparison  />
         </Box>
       </Box>
     </Box>

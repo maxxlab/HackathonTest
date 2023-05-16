@@ -4,7 +4,7 @@ import Divider from "@mui/material/Divider";
 import { Card, CardContent, CardMedia } from "@mui/material";
 import { Typography } from "@mui/material";
 
-export default function Balance() {
+export default function Balance(props) {
   return (
     <Card
       sx={{
@@ -12,6 +12,7 @@ export default function Balance() {
         maxWidth: "430px",
         minWidth: "430px",
         minHeight: "406px",
+        maxHeight: props.height,
         borderRadius: "20px",
       }}
     >

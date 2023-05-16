@@ -5,14 +5,14 @@ import { Card, CardContent, CardMedia } from "@mui/material";
 import { Typography } from "@mui/material";
 import LocalTaxiIcon from "@mui/icons-material/LocalTaxi";
 
-export default function TransactionHistoryWidget() {
+export default function TransactionHistoryWidget(props) {
   return (
     <Card
       sx={{
         marginTop: "30px",
-        maxWidth: "430px",
-        minWidth: "430px",
-        minHeight: "434px",
+        maxWidth: props.width,
+        minWidth: props.width,
+        minHeight: props.height,
         borderRadius: "20px",
       }}
     >
