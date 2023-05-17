@@ -63,7 +63,7 @@ const Drawer = styled(MuiDrawer, {
 const mdTheme = createTheme({
   palette: {
     primary: {
-      main: "#ffffff",
+      main: "#4B48EC",
     },
   },
 });
@@ -79,7 +79,7 @@ function DashboardContent() {
       <BrowserRouter>
         <Box sx={{ display: "flex" }}>
           <CssBaseline />
-          <AppBar position="absolute" open={open}>
+          <AppBar position="absolute" open={open} sx={{backgroundColor: 'white', color: 'black'}}>
             <Toolbar
               sx={{
                 pr: "24px", // keep right padding when drawer closed
@@ -147,7 +147,7 @@ function DashboardContent() {
           >
             <Box sx={{ paddingTop: "64px" }}>
               <Routes>
-                <Route index path="/dashboard" element={<DashboardPage />} />
+                <Route index path="/" element={<DashboardPage />} />
                 <Route path="/expends" element={<ExpendsPage />} />
                 <Route path="/credits" element={<CreditsPage />} />
                 <Route path="/investments" element={<InvestmentsPage />} />

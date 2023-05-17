@@ -14,7 +14,7 @@ import { Link, Outlet } from "react-router-dom";
 
 export const mainListItems = (
   <React.Fragment>
-    <Link to="/dashboard" style={{ textDecoration: "none", color: "#000000" }}>
+    <Link to="/" style={{ textDecoration: "none", color: "#000000" }}>
       <ListItemButton>
         <ListItemIcon>
           <DashboardIcon />
