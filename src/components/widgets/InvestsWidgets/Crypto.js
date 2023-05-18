@@ -9,12 +9,13 @@ import AccountBalanceIcon from "@mui/icons-material/AccountBalance";
 import TextField from "@mui/material/TextField";
 import Select from "@mui/material/Select";
 import Button from "@mui/material/Button";
+import CurrencyBitcoinIcon from '@mui/icons-material/CurrencyBitcoin';
 
-export default function Bank() {
-  const [bank, setBank] = React.useState("");
+export default function Crypto() {
+  const [crypto, setCrypto] = React.useState("");
 
   const handleChange = (event) => {
-    setBank(event.target.value);
+    setCrypto(event.target.value);
   };
 
   return (
@@ -38,7 +39,7 @@ export default function Bank() {
           >
             <Card sx={{ maxWidth: "60px", maxHeight: "60px" }}>
               <CardContent>
-                <AccountBalanceIcon sx={{}} />
+                <CurrencyBitcoinIcon />
               </CardContent>
             </Card>
             <Box sx={{ display: "flex", flexDirection: "column" }}>
@@ -46,17 +47,18 @@ export default function Bank() {
                 sx={{ width: "170px", marginBottom: "7px" }}
                 size="small"
               >
-                <InputLabel id="demo-simple-select-label">Bank</InputLabel>
+                <InputLabel id="demo-simple-select-label">Crypto</InputLabel>
                 <Select
                   labelId="demo-simple-select-label"
                   id="demo-simple-select"
-                  value={bank}
-                  label="Bank"
+                  value={crypto}
+                  label="Crypto"
                   onChange={handleChange}
                 >
-                  <MenuItem value={1}>Privat24</MenuItem>
-                  <MenuItem value={2}>MonoBank</MenuItem>
-                  <MenuItem value={3}>Oschadbank</MenuItem>
+                  <MenuItem value={1}>BTC</MenuItem>
+                  <MenuItem value={2}>ETH</MenuItem>
+                  <MenuItem value={3}>RPL</MenuItem>
+                  <MenuItem value={4}>MTC</MenuItem>
                 </Select>
               </FormControl>
               <TextField
