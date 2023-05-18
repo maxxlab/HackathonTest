@@ -11,7 +11,7 @@ import MakeLimitIncomeDonate from "../../widgets/ExpendsWidgets/MakeLimitIncomeD
 
 export default function ExpendsPage() {
   return (
-    <Box sx={{ padding: "20px", flexGrow: 1 }}>
+    <Box sx={{ padding: "600px", flexGrow: 1 }}>
       <Box sx={{display: 'flex', justifyContent: 'space-between', alignItems: 'center'}}>
         <AddIncome />
         <AddExpend />
