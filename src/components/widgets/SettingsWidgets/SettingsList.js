@@ -12,7 +12,7 @@ export default function SettingsList() {
     <Card
       sx={{
         marginTop: "30px",
-        maxWidth: "785",
+        maxWidth: "785px",
         minWidth: "515px",
         // maxHeight: "108px",
         // minHeight: "108px",
@@ -21,13 +21,10 @@ export default function SettingsList() {
     >
       <CardContent>
         <Box sx={{ display: "flex", flexDirection: "column" }}>
-          <SettingsTile
-            title="Phone"
-            value="+380******734"
-            
-          />
-          <SettingsTile title="Password" value="+380******734" />
-          <SettingsTile title="Email" value="+380******734" />
+          <SettingsTile title="Password" value="***********" icon="password" />
+          <SettingsTile title="Phone" value="+380******734" icon="phone" />
+          <SettingsTile title="Email" value="+380******734" icon="email" />
+          <SettingsTile title="Time Zone" value="+380******734" icon="time" />
         </Box>
       </CardContent>
     </Card>
