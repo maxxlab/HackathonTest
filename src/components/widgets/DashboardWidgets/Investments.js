@@ -14,11 +14,22 @@ export default function Investments() {
         maxHeight: "314px",
         minHeight: "310px",
         borderRadius: "20px",
-        marginRight: '10px'
+        marginRight: "10px",
+        boxShadow: 12,
+        border: "1px solid black",
       }}
     >
       <CardContent>
-        <Typography sx={{fontSize: '24pt', marginBottom: "15px", color: '#3C3C43', opacity: '0.6' }}>Investments</Typography>
+        <Typography
+          sx={{
+            fontSize: "24pt",
+            marginBottom: "15px",
+            color: "#3C3C43",
+            opacity: "0.6",
+          }}
+        >
+          Investments
+        </Typography>
         <Divider />
       </CardContent>
     </Card>

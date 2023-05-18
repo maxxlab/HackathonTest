@@ -13,6 +13,9 @@ export default function SavingsGoals() {
         minWidth: "600px",
         maxHeight: "314px",
         borderRadius: "20px",
+        boxShadow: 12,
+        margin: 2,
+        border: "1px solid black",
       }}
     >
       <CardContent>

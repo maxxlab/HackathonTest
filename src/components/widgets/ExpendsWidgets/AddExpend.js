@@ -23,6 +23,9 @@ export default function AddExpend() {
         maxHeight: "295px",
         minHeight: "295px",
         borderRadius: "20px",
+        boxShadow: 12,
+        margin: 2,
+        border: "1px solid black",
       }}
     >
       <CardContent>

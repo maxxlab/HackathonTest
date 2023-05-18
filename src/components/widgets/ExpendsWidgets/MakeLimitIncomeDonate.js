@@ -16,6 +16,8 @@ export default function MakeLimitIncomeDonate() {
         maxHeight: "401px",
         minHeight: "401px",
         borderRadius: "20px",
+        boxShadow: 12,
+        border: "1px solid black",
       }}
     >
       <CardContent>
@@ -33,11 +35,15 @@ function MakeSmth(props) {
   return (
     <>
       <Box
-        sx={{ display: "flex", flexDirection: "column", alignItems: "center" }}
+        sx={{ display: "flex", flexDirection: "column", alignItems: "center",  }}
       >
         <Typography sx={{ marginBottom: "15px" }}>{props.makeText}</Typography>
         <Card>
-          <CardContent sx={{ backgroundColor: "#FDFDFD" }}>
+          <CardContent
+            sx={{
+              backgroundColor: "#FDFDFD",
+            }}
+          >
             <Box
               sx={{
                 display: "flex",

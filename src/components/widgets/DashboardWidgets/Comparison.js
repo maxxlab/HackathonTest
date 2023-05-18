@@ -14,6 +14,8 @@ export default function Comparison(props) {
         maxHeight: "270px",
         minHeight: "270px",
         borderRadius: "20px",
+        boxShadow: 12,
+        border: "1px solid black",
       }}
     >
       <CardContent>

@@ -9,7 +9,7 @@ import AccountBalanceIcon from "@mui/icons-material/AccountBalance";
 import TextField from "@mui/material/TextField";
 import Select from "@mui/material/Select";
 import Button from "@mui/material/Button";
-import CurrencyBitcoinIcon from '@mui/icons-material/CurrencyBitcoin';
+import CurrencyBitcoinIcon from "@mui/icons-material/CurrencyBitcoin";
 
 export default function Crypto() {
   const [crypto, setCrypto] = React.useState("");
@@ -27,6 +27,9 @@ export default function Crypto() {
           minWidth: "502px",
           minHeight: "100px",
           borderRadius: "20px",
+          boxShadow: 12,
+          margin: 2,
+          border: "1px solid black",
         }}
       >
         <CardContent>

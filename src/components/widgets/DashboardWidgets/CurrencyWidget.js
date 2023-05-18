@@ -16,7 +16,10 @@ export default function CurrencyWidget() {
           xl: 204,
         },
         height: "84px",
-        marginTop: '15px'
+        marginTop: '15px',
+        boxShadow: 12,
+        margin: 2,
+        border: "1px solid black",
       }}
     >
       <CardContent

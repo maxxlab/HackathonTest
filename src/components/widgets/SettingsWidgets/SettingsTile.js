@@ -8,22 +8,28 @@ import LocalPhoneIcon from "@mui/icons-material/LocalPhone";
 import PasswordIcon from "@mui/icons-material/Password";
 import EmailIcon from "@mui/icons-material/Email";
 import AccessTimeIcon from "@mui/icons-material/AccessTime";
+import { shadows } from "@mui/system";
 
 export default function SettingsTile(props) {
   const icon = getIconFromName(props.icon);
 
   return (
     <Card
+      elevetion={12}
       sx={{
         marginTop: "30px",
         maxWidth: "515px",
         minWidth: "515px",
         borderRadius: "20px",
+        boxShadow: 12,
+        margin: 2,
+        // padding: 2,
+        border: "1px solid black",
       }}
     >
       <CardContent>
         <Box
-           sx={{
+          sx={{
             display: "flex",
             alignItems: "center",
             justifyContent: "space-between",

@@ -15,6 +15,10 @@ export default function UserWidget() {
         maxHeight: "108px",
         minHeight: "108px",
         borderRadius: "20px",
+        boxShadow: 12,
+        margin: 2,
+        
+        border: "1px solid black",
       }}
     >
       <CardContent>

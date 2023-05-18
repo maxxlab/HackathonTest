@@ -26,6 +26,9 @@ export default function Bank() {
           minWidth: "502px",
           minHeight: "100px",
           borderRadius: "20px",
+          boxShadow: 12,
+        margin: 2,
+        border: "1px solid black",
         }}
       >
         <CardContent>

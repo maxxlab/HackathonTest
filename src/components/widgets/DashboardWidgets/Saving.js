@@ -14,6 +14,8 @@ export default function Saving() {
         maxHeight: "314px",
         minHeight: "310px",
         borderRadius: "20px",
+        boxShadow: 12,
+        border: "1px solid black",
       }}
     >
       <CardContent>

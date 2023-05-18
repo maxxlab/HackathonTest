@@ -13,6 +13,9 @@ export default function Credit() {
         minWidth: "504px",
         minHeight: "312px",
         borderRadius: "20px",
+        boxShadow: 12,
+        margin: 2,
+        border: "1px solid black",
       }}
     >
       <CardContent>
