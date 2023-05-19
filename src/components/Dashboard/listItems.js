@@ -41,6 +41,15 @@ export const mainListItems = (
       </ListItemButton>
     </Link>
 
+    <Link to="/deposits" style={{ textDecoration: "none", color: "#000000" }}>
+      <ListItemButton>
+        <ListItemIcon>
+          <AccountBalanceIcon />
+        </ListItemIcon>
+        <ListItemText primary="Deposits" />
+      </ListItemButton>
+    </Link>
+
     <Link to="/investments" style={{ textDecoration: "none", color: "#000000" }}>
       <ListItemButton>
         <ListItemIcon>

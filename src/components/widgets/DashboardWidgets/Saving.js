@@ -9,13 +9,14 @@ export default function Saving() {
     <Card
       sx={{
         marginTop: "30px",
-        maxWidth: "320px",
-        minWidth: "320px",
+        maxWidth: "45%",
+        minWidth: "45%",
         maxHeight: "314px",
         minHeight: "310px",
         borderRadius: "20px",
         boxShadow: 12,
-        border: "1px solid black",
+        background: 'rgba(255, 255, 255, 0.7)',
+        backdropFilter: 'blur(5px)'
       }}
     >
       <CardContent>

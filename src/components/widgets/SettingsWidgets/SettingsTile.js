@@ -18,13 +18,12 @@ export default function SettingsTile(props) {
       elevetion={12}
       sx={{
         marginTop: "30px",
-        maxWidth: "515px",
-        minWidth: "515px",
-        borderRadius: "20px",
-        boxShadow: 12,
+        maxWidth: "50%",
+        minWidth: "95%",
         margin: 2,
+        background: 'rgba(255, 255, 255, 0.7)',
+        backdropFilter: 'blur(5px)'
         // padding: 2,
-        border: "1px solid black",
       }}
     >
       <CardContent>
@@ -35,10 +34,10 @@ export default function SettingsTile(props) {
             justifyContent: "space-between",
           }}
         >
-          <Box sx={{ display: "flex" }}>
+          <Box sx={{ display: "flex"}}>
             {icon}
             {/* <LocalPhoneIcon sx={{marginRight: '20px', fontSize: '20pt'}}/> */}
-            <Typography>{props.title}</Typography>
+            <Typography >{props.title}</Typography>
           </Box>
 
           <Box>

@@ -13,17 +13,21 @@ export default function SettingsList() {
       sx={{
         marginTop: "30px",
         maxWidth: "785px",
-        minWidth: "515px",
+        minWidth: "80%",
         // maxHeight: "108px",
-        // minHeight: "108px",
-        borderRadius: "20px",
+        minHeight: "500px",
+        background: 'rgba(255, 255, 255, 0.7)',
+        backdropFilter: 'blur(5px)'
       }}
     >
-      <CardContent>
+      <CardContent >
         <Box sx={{ display: "flex", flexDirection: "column" }}>
-          <SettingsTile title="Password" value="***********" icon="password" />
+          <SettingsTile title="Password" value="***********" icon="password"/>
+          <hr/>
           <SettingsTile title="Phone" value="+380******734" icon="phone" />
+          <hr/>
           <SettingsTile title="Email" value="+380******734" icon="email" />
+          <hr/>
           <SettingsTile title="Time Zone" value="+380******734" icon="time" />
         </Box>
       </CardContent>

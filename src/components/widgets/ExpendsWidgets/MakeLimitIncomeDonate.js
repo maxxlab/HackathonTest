@@ -5,19 +5,21 @@ import { Card, CardContent, CardMedia } from "@mui/material";
 import { Typography } from "@mui/material";
 import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
+import GoalsCharExp from "../../Graphs/Expends/GoalsChar";
 
 export default function MakeLimitIncomeDonate() {
   return (
     <Card
       sx={{
         marginTop: "-100px",
-        maxWidth: "430px",
-        minWidth: "430px",
+        maxWidth: "61%",
+        minWidth: "45%",
         maxHeight: "401px",
-        minHeight: "401px",
+        minHeight: "501px",
         borderRadius: "20px",
         boxShadow: 12,
-        border: "1px solid black",
+        background: 'rgba(255, 255, 255, 0.7)',
+        backdropFilter: 'blur(5px)'
       }}
     >
       <CardContent>
@@ -26,6 +28,7 @@ export default function MakeLimitIncomeDonate() {
           <MakeSmth makeText="Make Income" />
           <MakeSmth makeText="Make Donate" />
         </Box>
+        <GoalsCharExp/>
       </CardContent>
     </Card>
   );

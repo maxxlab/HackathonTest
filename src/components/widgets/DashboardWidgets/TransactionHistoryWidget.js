@@ -15,7 +15,8 @@ export default function TransactionHistoryWidget(props) {
         minHeight: props.height,
         borderRadius: "20px",
         boxShadow: 12,
-        border: "1px solid black",
+        background: 'rgba(255, 255, 255, 0.7)',
+        backdropFilter: 'blur(5px)'
       }}
     >
       <CardContent>

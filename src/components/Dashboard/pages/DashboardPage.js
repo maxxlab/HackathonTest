@@ -11,10 +11,11 @@ import Grid from "@mui/material/Grid";
 import Investments from "../../widgets/DashboardWidgets/Investments";
 import Saving from "../../widgets/DashboardWidgets/Saving";
 import Comparison from "../../widgets/DashboardWidgets/Comparison";
+import MyClass from "../../widgets/DashboardWidgets/CurrencyWidget";
 
 export default function DashboardPage() {
   return (
-    <Box sx={{ padding: "20px", flexGrow: 1 }}>
+    <Box sx={{width: '95%', padding: "20px", flexGrow: 1 , margin: '0 auto'}}>
       {/* Currency */}
       <Box
         sx={{
@@ -24,10 +25,11 @@ export default function DashboardPage() {
           flexWrap: "wrap",
         }}
       >
+        {/* <CurrencyWidget />
         <CurrencyWidget />
         <CurrencyWidget />
-        <CurrencyWidget />
-        <CurrencyWidget />
+        <CurrencyWidget /> */}
+        <MyClass/>
       </Box>
 
       {/* My Cards */}
@@ -36,6 +38,7 @@ export default function DashboardPage() {
           display: "flex",
           flexDirection: "row",
           justifyContent: "space-between",
+          width: "100%",
         }}
       >
         <MyCards />
@@ -47,6 +50,7 @@ export default function DashboardPage() {
           display: "flex",
           flexDirection: "row",
           justifyContent: "space-between",
+          
         }}
       >
         <Balance />
@@ -54,9 +58,9 @@ export default function DashboardPage() {
       </Box>
 
       <Box sx={{ display: "flex", justifyContent: "space-between" }}>
-        <TransactionHistoryWidget width="430px" />
-        <Box>
-          <Box sx={{display: 'flex', marginTop: '-100px', justifyContent: 'justify'}}>
+        <TransactionHistoryWidget width="42%" />
+        <Box sx={{width:"55%"}}>
+          <Box sx={{ display: 'flex', marginTop: '-100px', justifyContent: 'space-between',width:'98%'}}>
             <Investments />
             <Saving />
           </Box>

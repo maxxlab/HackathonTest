@@ -8,10 +8,13 @@ import TransactionHistoryWidget from "../../widgets/DashboardWidgets/Transaction
 import Balance from "../../widgets/DashboardWidgets/Balance";
 import Comparison from "../../widgets/DashboardWidgets/Comparison";
 import MakeLimitIncomeDonate from "../../widgets/ExpendsWidgets/MakeLimitIncomeDonate";
+import ComparisonExpends from "../../widgets/ExpendsWidgets/ComparsionExpends";
+import TransactionHistoryExpendsWidget from "../../widgets/ExpendsWidgets/TransitionHistoriExpends";
+import BalanceExpends from "../../widgets/ExpendsWidgets/BalanceExpends";
 
 export default function ExpendsPage() {
   return (
-    <Box sx={{ padding: "600px", flexGrow: 1 }}>
+    <Box sx={{ width: '95%', padding: "20px", flexGrow: 1, margin: '0 auto' , marginTop: '30px'}}>
       <Box sx={{display: 'flex', justifyContent: 'space-between', alignItems: 'center'}}>
         <AddIncome />
         <AddExpend />
@@ -19,12 +22,12 @@ export default function ExpendsPage() {
       </Box>
 
       <Box sx={{display: 'flex', justifyContent: 'space-between'}}>
-        <TransactionHistoryWidget width="591px" height="538px"/>
-        <Balance height="400px"/>
+        <TransactionHistoryExpendsWidget width="52%" height="538px"/>
+        <BalanceExpends  height="400px"/>
       </Box>
 
-      <Box sx={{display: 'flex', justifyContent: 'space-between'}}>
-        <Comparison width="591px"/>
+      <Box sx={{display: 'flex', justifyContent: 'space-between', width: "100%" }}>
+        <ComparisonExpends/>
         <MakeLimitIncomeDonate/>
       </Box>
     </Box>

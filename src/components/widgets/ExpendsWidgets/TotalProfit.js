@@ -11,14 +11,15 @@ export default function TotalProfit() {
     <Card
       sx={{
         marginTop: "30px",
-        maxWidth: "205px",
-        minWidth: "205px",
-        maxHeight: "101px",
-        minHeight: "101px",
+        maxWidth: "305px",
+        minWidth: "305px",
+        maxHeight: "201px",
+        minHeight: "201px",
         borderRadius: "20px",
         boxShadow: 12,
-        margin: 2,
-        border: "1px solid black",
+        marginTop: 2,
+        background: 'rgba(255, 255, 255, 0.7)',
+        backdropFilter: 'blur(5px)'
       }}
     >
       <CardContent>

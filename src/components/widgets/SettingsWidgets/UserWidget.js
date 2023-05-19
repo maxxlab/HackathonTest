@@ -11,14 +11,12 @@ export default function UserWidget() {
       sx={{
         marginTop: "30px",
         maxWidth: "515px",
-        minWidth: "515px",
+        minWidth: "70%",
         maxHeight: "108px",
         minHeight: "108px",
         borderRadius: "20px",
-        boxShadow: 12,
-        margin: 2,
-        
-        border: "1px solid black",
+        background: 'rgba(255, 255, 255, 0.7)',
+        backdropFilter: 'blur(5px)'
       }}
     >
       <CardContent>

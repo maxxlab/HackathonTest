@@ -19,13 +19,14 @@ export default function AddIncome() {
       sx={{
         marginTop: "30px",
         maxWidth: "360px",
-        minWidth: "360px",
+        minWidth: "35%",
         maxHeight: "295px",
         minHeight: "295px",
         borderRadius: "20px",
         boxShadow: 12,
-        margin: 2,
-        border: "1px solid black",
+        marginTop: 2,
+        background: 'rgba(255, 255, 255, 0.7)',
+        backdropFilter: 'blur(5px)'
       }}
     >
       <CardContent>

@@ -21,6 +21,8 @@ import ExpendsPage from "./pages/ExpendsPage";
 import CreditsPage from "./pages/CreditsPage";
 import SettingsPage from "./pages/SettingsPage";
 import InvestmentsPage from "./pages/InvestmentsPage";
+import DepositPage from "./pages/DepositPage";
+import "./styles.css"
 
 const drawerWidth = 240;
 
@@ -77,12 +79,14 @@ function DashboardContent() {
   return (
     <ThemeProvider theme={mdTheme}>
       <BrowserRouter>
-        <Box sx={{ display: "flex" }}>
+        <Box sx={{ display: "flex" ,}}>
           <CssBaseline />
-          <AppBar position="absolute" open={open} sx={{backgroundColor: 'white', color: 'black'}}>
+          <AppBar position="absolute" open={open} sx={{backgroundColor: 'white', color: 'black',background: 'rgba(255, 255, 255, 0)',backdropFilter: 'blur(5px)'}}>
             <Toolbar
               sx={{
-                pr: "24px", // keep right padding when drawer closed
+                pr: "24px", 
+                background: 'rgba(255, 255, 255, 0.95)',backdropFilter: 'blur(5px)'
+                // keep right padding when drawer closed
               }}
             >
               <IconButton
@@ -91,18 +95,20 @@ function DashboardContent() {
                 aria-label="open drawer"
                 onClick={toggleDrawer}
                 sx={{
-                  marginRight: "36px",
+                  marginRight: "36px", background: 'rgba(255, 255, 255, 0.7)',
+                  backdropFilter: 'blur(5px)',
                   ...(open && { display: "none" }),
                 }}
               >
-                <MenuIcon />
+                <MenuIcon sx={{background: 'rgba(255, 255, 255, 0.7)',
+        backdropFilter: 'blur(5px)'}}/>
               </IconButton>
               <Typography
                 component="h1"
                 variant="h6"
                 color="inherit"
                 noWrap
-                sx={{ flexGrow: 1 }}
+                sx={{ flexGrow: 1,  }}
               >
                 Dolbik Digital
               </Typography>
@@ -113,7 +119,7 @@ function DashboardContent() {
               </IconButton>
             </Toolbar>
           </AppBar>
-          <Drawer variant="permanent" open={open}>
+          <Drawer  variant="permanent" open={open}>
             <Toolbar
               sx={{
                 display: "flex",
@@ -127,19 +133,20 @@ function DashboardContent() {
               </IconButton>
             </Toolbar>
             <Divider />
-            <List component="nav">
+            <List  component="nav">
               {mainListItems}
               <Divider sx={{ my: 1 }} />
               {/* {secondaryListItems} */}
             </List>
           </Drawer>
           <Box
+          className="Box-back"
             component="main"
             sx={{
-              backgroundColor: (theme) =>
-                theme.palette.mode === "light"
-                  ? theme.palette.grey[100]
-                  : theme.palette.grey[900],
+              // backgroundColor: (theme) =>
+              //   theme.palette.mode === "light"
+              //     ? 'red'
+              //     : theme.palette.grey[900],
               flexGrow: 1,
               height: "100vh",
               overflow: "auto",
@@ -150,6 +157,7 @@ function DashboardContent() {
                 <Route index path="/" element={<DashboardPage />} />
                 <Route path="/expends" element={<ExpendsPage />} />
                 <Route path="/credits" element={<CreditsPage />} />
+                <Route path="/deposits" element={<DepositPage />} />
                 <Route path="/investments" element={<InvestmentsPage />} />
                 <Route path="/settings" element={<SettingsPage />} />
 

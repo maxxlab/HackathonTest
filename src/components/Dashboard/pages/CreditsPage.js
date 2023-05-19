@@ -7,28 +7,21 @@ import Bank from "../../widgets/CreditsWidgets/Bank";
 import Comparison from "../../widgets/DashboardWidgets/Comparison";
 import TransactionHistoryWidget from "../../widgets/DashboardWidgets/TransactionHistoryWidget";
 import ListOfBanks from "../../widgets/CreditsWidgets/ListOfBanks";
+import TableDataBase from "../../widgets/CreditsWidgets/TableDatabase";
 
 export default function CreditsPage() {
   return (
-    <Box sx={{ padding: "20px", flexGrow: 1 }}>
-      <Box sx={{ display: "flex", justifyContent: "space-around" }}>
-        <Credit />
-        <Deposit />
+    <Box sx={{ marginTop: "30px",padding: "20px", flexGrow: 1 }}>
+      <Box sx={{display: 'flex',justifyContent: "space-around", margin:'0 auto'}}>
+        <Box sx={{width: '50%'}}>
+          <Credit />
+          <Bank />  
+        </Box>
+          <ListOfBanks />
       </Box>
-
-      <Box sx={{ display: "flex", justifyContent: "space-around" }}>
-        <Bank />  
-        <Bank />
-      </Box>
-
-      <Box sx={{display: 'flex', justifyContent: 'space-around'}}>
-        <Comparison width="504px" />
-        <TransactionHistoryWidget width="504px" />
-      </Box>
-
-      <Box sx={{display: 'flex', justifyContent: 'space-around'}}>
-        <ListOfBanks />
-        <ListOfBanks />
+      
+      <Box>
+        <TableDataBase/>
       </Box>
       
 

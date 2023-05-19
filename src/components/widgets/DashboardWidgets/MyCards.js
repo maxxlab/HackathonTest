@@ -9,13 +9,14 @@ export default function MyCards() {
     <Card
       sx={{
         marginTop: "30px",
-        maxWidth: "560px",
-        minWidth: "560px",
-        minHeight: "316px",
+        maxWidth: "50%",
+        minWidth: "52%",
+        minHeight: "100%",
         borderRadius: "20px",
         boxShadow: 12,
-        margin: 2,
-        border: "1px solid black",
+        marginTop: 2,
+        background: 'rgba(255, 255, 255, 0.7)',
+        backdropFilter: 'blur(5px)'
       }}
     >
       <CardContent>

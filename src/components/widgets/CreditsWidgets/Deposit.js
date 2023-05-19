@@ -16,6 +16,8 @@ export default function Deposit() {
         boxShadow: 12,
         margin: 2,
         border: "1px solid black",
+        background: 'rgba(255, 255, 255, 0.7)',
+        backdropFilter: 'blur(5px)'
       }}
     >
       <CardContent>

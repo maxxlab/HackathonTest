@@ -22,13 +22,13 @@ export default function Bank() {
       <Card
         sx={{
           marginTop: "30px",
-          maxWidth: "502px",
-          minWidth: "502px",
-          minHeight: "100px",
+          maxWidth: "100%",
+          minWidth: "100%",
+          minHeight: "400px",
           borderRadius: "20px",
           boxShadow: 12,
-        margin: 2,
-        border: "1px solid black",
+          background: 'rgba(255, 255, 255, 0.7)',
+        backdropFilter: 'blur(5px)'
         }}
       >
         <CardContent>
