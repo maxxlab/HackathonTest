@@ -9,8 +9,9 @@ import Button from "@mui/material/Button";
 const inputStyles = {
   borderRadius: "10px",
   marginBottom: "10px",
-  height: "50px",
+  height: "40px",
   fontSize: "13pt",
+  width: '130%'
 };
 
 export default function AddIncome() {
@@ -26,43 +27,20 @@ export default function AddIncome() {
         boxShadow: 12,
         marginTop: 2,
         background: 'rgba(255, 255, 255, 0.7)',
-        backdropFilter: 'blur(5px)'
+        backdropFilter: 'blur(5px)',
+        padding: '10px'
       }}
     >
       <CardContent>
+        <Box sx={{display:'flex', justifyContent:'space-between'}}>
         <Typography
           sx={{
             fontSize: "16pt",
             marginBottom: "5px",
           }}
         >
-          Add Income
+          Add Expend
         </Typography>
-        <Divider sx={{ marginBottom: "15px" }} />
-        <TextField
-          id="outlined-basic"
-          label="Income Name"
-          variant="outlined"
-          InputProps={{
-            style: inputStyles,
-          }}
-        />
-        <TextField
-          id="outlined-basic"
-          label="Income Count"
-          variant="outlined"
-          InputProps={{
-            style: inputStyles,
-          }}
-        />
-        <TextField
-          id="outlined-basic"
-          label="Income Date"
-          variant="outlined"
-          InputProps={{
-            style: inputStyles,
-          }}
-        />
         <Box sx={{ display: "flex", justifyContent: "flex-end" }}>
           <Button
             variant="contained"
@@ -72,12 +50,47 @@ export default function AddIncome() {
               color: "white",
               maxHeight: '34px',
               maxWidth: '34px',
-              fontSize: '20pt'
+              fontSize: '20pt',
             }}
           >
             +
           </Button>
         </Box>
+        </Box>
+
+        <Divider sx={{ marginBottom: "15px" }} />
+        <TextField
+          id="outlined-basic"
+          label="Expend Name"
+          variant="outlined"
+          InputProps={{
+            style: inputStyles,
+          }}
+        />
+        <TextField
+          id="outlined-basic"
+          label="Expend Count"
+          variant="outlined"
+          InputProps={{
+            style: inputStyles,
+          }}
+        />
+        <TextField
+          id="outlined-basic"
+          label="Expend Date"
+          variant="outlined"
+          InputProps={{
+            style: inputStyles,
+          }}
+        />
+        <TextField
+          id="outlined-basic"
+          label="Expend Date"
+          variant="outlined"
+          InputProps={{
+            style: inputStyles,
+          }}
+        />
       </CardContent>
     </Card>
   );

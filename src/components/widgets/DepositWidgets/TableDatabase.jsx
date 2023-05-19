@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import "./styles/table.css";
 
 
-class TableDataBase extends Component {
+class TableDataBaseofDeposits extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -19,7 +19,7 @@ class TableDataBase extends Component {
 
     return (
       <div style={{borderRadius:'50px'}}>
-      <table style={{width: '95%',margin: ' 0 auto',  borderRadius: '10px', marginTop: '2%',background: 'rgba(255, 255, 255, 0.7)',backdropFilter: 'blur(5px)'}} className='table'>
+      <table style={{width: '95%',margin: ' 0 auto',  borderRadius: '10px', marginTop: '2%'}} className='table'>
          <thead>
          <tr >
             <th scope="col" >Bank</th>
@@ -126,4 +126,4 @@ class TableDataBase extends Component {
   }
 }
 
-export default TableDataBase;
+export default TableDataBaseofDeposits;

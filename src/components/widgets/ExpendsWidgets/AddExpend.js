@@ -9,8 +9,9 @@ import Button from "@mui/material/Button";
 const inputStyles = {
   borderRadius: "10px",
   marginBottom: "10px",
-  height: "50px",
+  height: "40px",
   fontSize: "13pt",
+  width: '130%'
 };
 
 export default function AddExpend() {
@@ -26,10 +27,12 @@ export default function AddExpend() {
         boxShadow: 12,
         marginTop: 2,
         background: 'rgba(255, 255, 255, 0.7)',
-        backdropFilter: 'blur(5px)'
+        backdropFilter: 'blur(5px)',
+        padding: '10px'
       }}
     >
       <CardContent>
+        <Box sx={{display:'flex', justifyContent:'space-between'}}>
         <Typography
           sx={{
             fontSize: "16pt",
@@ -38,6 +41,23 @@ export default function AddExpend() {
         >
           Add Expend
         </Typography>
+        <Box sx={{ display: "flex", justifyContent: "flex-end" }}>
+          <Button
+            variant="contained"
+            sx={{
+              borderRadius: "12px",
+              backgroundColor: "#3290FF",
+              color: "white",
+              maxHeight: '34px',
+              maxWidth: '34px',
+              fontSize: '20pt',
+            }}
+          >
+            +
+          </Button>
+        </Box>
+        </Box>
+
         <Divider sx={{ marginBottom: "15px" }} />
         <TextField
           id="outlined-basic"
@@ -63,21 +83,14 @@ export default function AddExpend() {
             style: inputStyles,
           }}
         />
-        <Box sx={{ display: "flex", justifyContent: "flex-end" }}>
-          <Button
-            variant="contained"
-            sx={{
-              borderRadius: "12px",
-              backgroundColor: "#3290FF",
-              color: "white",
-              maxHeight: '34px',
-              maxWidth: '34px',
-              fontSize: '20pt'
-            }}
-          >
-            +
-          </Button>
-        </Box>
+        <TextField
+          id="outlined-basic"
+          label="Expend Date"
+          variant="outlined"
+          InputProps={{
+            style: inputStyles,
+          }}
+        />
       </CardContent>
     </Card>
   );

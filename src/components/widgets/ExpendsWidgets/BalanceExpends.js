@@ -18,16 +18,19 @@ export default function BalanceExpends(props) {
         borderRadius: "20px",
         boxShadow: 12,
         background: 'rgba(255, 255, 255, 0.7)',
-        backdropFilter: 'blur(5px)'
+        backdropFilter: 'blur(5px)',
+        paddingTop: 2,
+        paddingLeft:4
       }}
     >
       <CardContent>
         <Typography sx={{ fontSize: '16pt', color: '#3C3C43', opacity: '0.6' }}>Balance</Typography>
-        <Typography sx={{fontSize: '27pt'}}>5.435,654$</Typography>
+        <Typography sx={{fontSize: '27pt', fontWeight:600}}>5.435,654$</Typography>
         <Typography sx={{marginBottom: '15px',fontSize: '16pt'}}>May</Typography>
+        <Divider sx={{backgroundColor:'grey',height:3,opacity:0.1}}/>
         <PieGraphExp/>
-        <Divider />
       </CardContent>
+      
     </Card>
   );
 }

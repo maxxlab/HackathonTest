@@ -17,13 +17,16 @@ export default function Balance(props) {
         borderRadius: "20px",
         boxShadow: 12,
         background: 'rgba(255, 255, 255, 0.7)',
-        backdropFilter: 'blur(5px)'
+        backdropFilter: 'blur(5px)',
+        paddingTop:3,
+        paddingLeft:3
       }}
     >
       <CardContent>
-        <Typography sx={{ fontSize: '16pt', color: '#3C3C43', opacity: '0.6' }}>Balance</Typography>
-        <Typography sx={{fontSize: '27pt'}}>5.435,654$</Typography>
-        <Typography sx={{marginBottom: '15px',fontSize: '16pt'}}>May</Typography>
+        <Typography sx={{ fontSize: '20pt', color: '#3C3C43', opacity: '0.8', fontWeight:600 }}>Balance</Typography>
+        <Typography sx={{fontSize: 40, fontWeight: 700, opacity:0.8}}>5.435,654$</Typography>
+        <Typography sx={{marginBottom: '15px',fontSize: '18pt'}}>May</Typography>
+        <Divider sx={{backgroundColor:'rgba(151, 151, 151, 0.25)',height:2}}/>
         <PieGraphDash/>
         <Divider />
       </CardContent>

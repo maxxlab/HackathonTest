@@ -7,6 +7,7 @@ import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
 
 export default function TotalProfit() {
+  let balance = 12322
   return (
     <Card
       sx={{
@@ -23,7 +24,16 @@ export default function TotalProfit() {
       }}
     >
       <CardContent>
-
+          <div className="invest-box">
+            <div>
+              <img style={{width:'100%', borderRadius: 100, paddingRight:'10px'}} src={balance > 0 ? "https://i.pinimg.com/564x/38/3a/86/383a86c9f90bb9b82ef4e186f59e5926.jpg": "https://i.pinimg.com/564x/6e/32/07/6e3207ad912f5009939f1bdbc9ea8831.jpg"}   alt=""/>
+            </div>
+            <div>
+              <div style={{display: 'flex',flexDirection:'column'}}>
+                <span style={{fontSize:'40px',color:`${balance < 0 ? 'red' : '#20C2B9'}`,fontWeight:600,opacity:0.8}}>+35%</span>
+              </div>
+            </div>
+        </div>
       </CardContent>
     </Card>
   );

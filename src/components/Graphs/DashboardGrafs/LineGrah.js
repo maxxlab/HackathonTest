@@ -11,67 +11,47 @@ import {
 
 const data = [
   {
-    name: "Page A",
-    uv: 1000,
+    name: "Jan",
+    uv: 10000,
     pv: 2400,
     amt: 2400
   },
   {
-    name: "Page B",
-    uv: 1400,
+    name: "Feb",
+    uv: 14000,
     pv: 1398,
     amt: 2210
   },
   {
-    name: "Page C",
-    uv: 2100,
+    name: "Mar",
+    uv: 12000,
     pv: 9800,
     amt: 2290
   },
   {
-    name: "Page D",
-    uv: 1880,
+    name: "Apr",
+    uv: 18080,
     pv: 3908,
     amt: 2000
   },
   {
-    name: "Page E",
-    uv: 2190,
+    name: "May",
+    uv: 19190,
     pv: 4800,
     amt: 2181
-  },
-  {
-    name: "Page F",
-    uv: 2090,
-    pv: 3800,
-    amt: 2500
-  },
-  {
-    name: "Page G",
-    uv: 2190,
-    pv: 40300,
-    amt: 0
-  },
-  {
-   name: "Page G",
-   
- },
- {
-   name: "Page G",
-   
- }
+  }
 ];
 
 export default function LineGraphdashboard() {
   return (
     <AreaChart
-      width={500}
-      height={400}
+      width={window.innerWidth/3.5}
+      height={300}
       data={data}
       margin={{
         top: 10,
-        right: 30,
-        left: 0,
+        right: 0,
+        left: 10,
         bottom: 0
       }}
     >
