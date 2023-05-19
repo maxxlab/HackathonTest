@@ -13,7 +13,7 @@ export default function Credit() {
         marginTop: "30px",
         maxWidth: "100%",
         minWidth: "100%",
-        minHeight: "40%",
+        height: "45%",
         borderRadius: "20px",
         boxShadow: 12,
         marginTop: 0,

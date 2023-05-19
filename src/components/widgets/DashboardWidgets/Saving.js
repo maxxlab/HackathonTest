@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Box from "@mui/material/Box";
 import Divider from "@mui/material/Divider";
 import { Card, CardContent, CardMedia } from "@mui/material";
@@ -6,6 +6,7 @@ import { Typography } from "@mui/material";
 import "./styles/Savings.css"
 
 export default function Saving() {
+  
   return (
     <Card
       sx={{
@@ -32,16 +33,22 @@ export default function Saving() {
           Saving
         </Typography>
         <Divider />
-        <Box sx={{backgroundImage: "url('https://i.pinimg.com/564x/80/17/d9/8017d9ece1aeae2204d39ab451762fc3.jpg')",backgroundSize: 'contain',  backgroundRepeat: 'no-repeat',backgroundZoom: '50%',height:'220px',paddingTop:'30%', opacity:0.8, backgroundPosition: '55% 0'}}>
+        <Box sx={{paddingTop:'15%'}}>
         <Typography sx={{
-            fontSize: "30pt",
+          margin: '0 auto',
+            fontSize: `${window.innerWidth < 1450 ? "20pt" :"30pt"}`,
             marginBottom: "15px",
             color: "#3C3C43",
-            opacity: "0.8",
+            opacity: "0.9",
             fontWeight: 600,
             // marginTop: '25%',
-            marginLeft: '30%'
-          }}>
+            textAlign: 'center',
+            padding: '20px',
+            backgroundColor:'rgba(255, 255, 255, 0.49)',
+            borderRadius: '10px',
+            width: '50%',
+            boxShadow: ' rgba(0, 0, 0, 0.35) 0px 5px 15px;'
+          }} className="font-px">
             $1200
             </Typography>
         </Box>

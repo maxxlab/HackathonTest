@@ -3,7 +3,7 @@ import Box from "@mui/material/Box";
 import InputLabel from "@mui/material/InputLabel";
 import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
-import { Card, CardContent, CardMedia } from "@mui/material";
+import { Card, CardContent, CardMedia, Divider } from "@mui/material";
 import { Typography } from "@mui/material";
 import AccountBalanceIcon from "@mui/icons-material/AccountBalance";
 import TextField from "@mui/material/TextField";
@@ -28,69 +28,65 @@ export default function BankDeposit() {
           borderRadius: "20px",
           boxShadow: 12,
           background: 'rgba(255, 255, 255, 0.7)',
-        backdropFilter: 'blur(5px)'
+        backdropFilter: 'blur(5px)',
+        padding:'20px'
         }}
       >
         <CardContent>
-          <Box
-            sx={{
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "space-between",
-            }}
-          >
-            <Card sx={{ maxWidth: "60px", maxHeight: "60px" }}>
-              <CardContent>
-                <AccountBalanceIcon sx={{}} />
-              </CardContent>
-            </Card>
-            <Box sx={{ display: "flex", flexDirection: "column" }}>
-              <FormControl
-                sx={{ width: "170px", marginBottom: "7px" }}
-                size="small"
-              >
-                <InputLabel id="demo-simple-select-label">Bank</InputLabel>
-                <Select
-                  labelId="demo-simple-select-label"
-                  id="demo-simple-select"
-                  value={bank}
-                  label="Bank"
-                  onChange={handleChange}
-                >
-                  <MenuItem value={1}>Privat24</MenuItem>
-                  <MenuItem value={2}>MonoBank</MenuItem>
-                  <MenuItem value={3}>Oschadbank</MenuItem>
-                </Select>
-              </FormControl>
-              <TextField
-                id="outlined-basic"
-                variant="outlined"
-                size="small"
-                sx={{ width: "170px" }}
-              />
+          <Box>
+            <Box>
+            <Typography sx={{ fontSize: '26pt',fontWeight: 600, opacity:0.8  }}>Take Deposit</Typography>
             </Box>
-            <Box sx={{ display: "flex", alignItems: "flex-end" }}>
-              <Typography>1%</Typography>
+            <Divider sx={{backgroundColor:'rgba(151, 151, 151, 0.25)' , height: 2}}/>
+            <Box>
+                <Box sx={{display:'flex',alignItems:'center',justifyContent:'space-between',width:'90%',margin:'0 auto', height:'70px'}}>
+                  <Typography sx={{fontSize:'22px'}}>Choose Bank</Typography>
+                  <Select
+                    labelId="demo-simple-select-label"
+                    id="demo-simple-select"
+                    value={bank}
+                    label="Bank"
+                    onChange={handleChange}
+                  >
+                    <MenuItem value={1}>Privat24</MenuItem>
+                    <MenuItem value={2}>MonoBank</MenuItem>
+                    <MenuItem value={3}>Oschadbank</MenuItem>
+                  </Select>
+                </Box >
+                    <Divider sx={{backgroundColor:'rgba(151, 151, 151, 0.25)' , height: 2}}/>
+                <Box sx={{display:'flex',alignItems:'center',justifyContent:'space-between',width:'90%',margin:'0 auto', height:'70px'}}>
+                    <Typography sx={{fontSize:'22px'}}>Write Amount</Typography>
+                    <TextField
+                    id="outlined-basic"
+                    variant="outlined"
+                    size="small"
+                    sx={{ width: "170px" }}
+                  />
+                </Box>
+                <Divider sx={{backgroundColor:'rgba(151, 151, 151, 0.25)' , height: 2}}/>
+                <Box sx={{display:'flex',alignItems:'center',justifyContent:'space-between',width:'90%',margin:'0 auto', height:'70px'}}>
+                  <Typography sx={{fontSize:'22px'}}>Percent</Typography>
+                  <Typography sx={{fontSize:'22px'}}>1.6%</Typography>
+                </Box>
+                <Divider sx={{backgroundColor:'rgba(151, 151, 151, 0.25)' , height: 2}}/>
             </Box>
-            <Box sx={{ display: "flex", flexDirection: "column" }}>
-              <Button
+            <Box sx={{margin:'0 auto'}}>
+            <Button
                 variant="contained"
                 sx={{
                   backgroundColor: "#4FE4DB",
+                  margin:'0 auto',
                   color: "white",
-                  marginBottom: "7px",
+                  marginBottom: "0px",
+                  width:'100%',
+                  marginTop:'40px'
                 }}
               >
                 Buy
               </Button>
-              <Button
-                variant="contained"
-                sx={{ backgroundColor: "#EE4F31", color: "white" }}
-              >
-                Sell
-              </Button>
             </Box>
           </Box>
+          
         </CardContent>
       </Card>
     </>

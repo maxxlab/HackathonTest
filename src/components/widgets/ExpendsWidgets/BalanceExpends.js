@@ -1,12 +1,25 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Box from "@mui/material/Box";
 import Divider from "@mui/material/Divider";
 import { Card, CardContent, CardMedia } from "@mui/material";
 import { Typography } from "@mui/material";
 import BarCharDash from "../../Graphs/DashboardGrafs/BarChar";
 import PieGraphExp from "../../Graphs/Expends/PieChart";
+import axios from "axios";
 
 export default function BalanceExpends(props) {
+   const clientBal = axios.create({
+      baseURL: "https://back-end-hack.up.railway.app/api/", 
+    });
+    const [balance, setBalance] = useState();
+
+    useEffect(() => {
+      clientBal.get("").then((response) => {
+         setBalance(response.data.cardList['0'].currentBalance);
+         // console.log(response)
+       });
+    },[])
+
   return (
     <Card
       sx={{
@@ -25,7 +38,7 @@ export default function BalanceExpends(props) {
     >
       <CardContent>
         <Typography sx={{ fontSize: '16pt', color: '#3C3C43', opacity: '0.6' }}>Balance</Typography>
-        <Typography sx={{fontSize: '27pt', fontWeight:600}}>5.435,654$</Typography>
+        <Typography sx={{fontSize: '27pt', fontWeight:600}}>{balance}$</Typography>
         <Typography sx={{marginBottom: '15px',fontSize: '16pt'}}>May</Typography>
         <Divider sx={{backgroundColor:'grey',height:3,opacity:0.1}}/>
         <PieGraphExp/>

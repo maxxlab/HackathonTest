@@ -12,19 +12,22 @@ export default function DepositWidg() {
         marginTop: "30px",
         maxWidth: "100%",
         minWidth: "100%",
-        minHeight: "48%",
+        height: "45%",
         borderRadius: "20px",
         boxShadow: 12,
         marginTop: 0,
         background: 'rgba(255, 255, 255, 0.7)',
-        backdropFilter: 'blur(5px)'
+        backdropFilter: 'blur(5px)',
+        padding: '20px'
        
       }}
     >
       <CardContent>
-        <Typography sx={{ fontSize: '16pt',  }}>Deposits</Typography>
+        <Typography sx={{ fontSize: '26pt',fontWeight: 600, opacity:0.8  }}>Deposit</Typography>
+        <Divider sx={{backgroundColor:'rgba(151, 151, 151, 0.25)' , height: 2}}/>
         <PieGraphDepoits/>
       </CardContent>
     </Card>
   )
 }
+

@@ -30,16 +30,50 @@
 //   );
 // }
 import { Box } from "@mui/system";
-import React from "react";
+import axios from "axios";
+import React, { useEffect, useState } from "react";
 import { PieChart, Pie, Sector, Cell } from "recharts";
 
+
+export default function PieGraphExp() {
+   const client = axios.create({
+      baseURL: "https://back-end-hack.up.railway.app/api/transactions/INCOME",
+    });
+    const clientExp = axios.create({
+      baseURL: "https://back-end-hack.up.railway.app/api/transactions/SPENDING",
+    });
+    const clientBal = axios.create({
+      baseURL: "https://back-end-hack.up.railway.app/api/", 
+    });
+    const [balanceBar, setBalanceBar] = useState([]);
+    const [expBar, setExp] = useState([]);
+    const [balance, setBalance] = useState();
+
 const data = [
-  { name: "Group A", value: 400 },
-  { name: "Group B", value: 300 }
+  { name: "Income", value: expBar },
+  { name: "Expeds", value: balanceBar }
 ];
 const COLORS = ["#4882F0", "#EE4F31"];
 
-export default function PieGraphExp() {
+   useEffect(() => {
+      client.get("").then((response) => {
+         setBalanceBar(response.data);
+        console.log(response.data);
+        // console.log(response)
+      });
+      clientExp.get("").then((response) => {
+         setExp(response.data);
+        console.log(response.data);
+        // console.log(response)
+      });
+      clientBal.get("").then((response) => {
+         setBalance(response.data.cardList['0'].currentBalance);
+         // console.log(response)
+       });
+
+    }, []);
+
+   
   return (<div style={{display:'flex', alignItems:'center'}}>
       <PieChart width={200} height={200} style={{marginRight:'15%'}}>
             <Pie

@@ -90,24 +90,24 @@ class ListOfCryptos extends Component {
   }
 
 
-//   componentDidMount() {
-//    let url ='https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&sparkline=false&locale=en';
-//    //  let url ='https://api.coingecko.com/api/v3/coins/list';
-//    //  let url = 'https://api.polygon.io/v3/reference/tickers/types?asset_class=crypto&apiKey=Fn0PwswoV4RTs5EB760VdIUWUxfFR17O'
+  componentDidMount() {
+   let url ='https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&sparkline=false&locale=en';
+   //  let url ='https://api.coingecko.com/api/v3/coins/list';
+   //  let url = 'https://api.polygon.io/v3/reference/tickers/types?asset_class=crypto&apiKey=Fn0PwswoV4RTs5EB760VdIUWUxfFR17O'
 
 
-// fetch(url)
-//   .then(response => response.json())
-//   .then(data => {
-//     // Обробка даних у форматі JSON
-//     this.setState({ List: data })
-//    console.log(data);
-//   })
-//   .catch(error => {
-//     // Обробка помилки
-//     console.error('Помилка отримання даних:', error);
-//   });
-//     }
+fetch(url)
+  .then(response => response.json())
+  .then(data => {
+    // Обробка даних у форматі JSON
+    this.setState({ List: data })
+   console.log(data);
+  })
+  .catch(error => {
+    // Обробка помилки
+    console.error('Помилка отримання даних:', error);
+  });
+    }
 
 
   render() {
@@ -118,7 +118,7 @@ class ListOfCryptos extends Component {
       <div className='crypto-box'>
         <ul className='ul-crypto'>
         {
-           fakeList.map(current =>(
+           List.map(current =>(
               <li key={current.id}  className={current.id % 2 === 0 ? 'red-box li-element' : 'green-box li-element'}>
                  <div className='logo'>
                      <img className='btc-img' src={current.image} alt="" />
